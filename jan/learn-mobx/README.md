@@ -1,6 +1,6 @@
 yarn init
 
-### dependencies-packages
+### dependencies ###
 
 yarn add react
 
@@ -12,7 +12,7 @@ yarn add react-mobx
 
 yarn add @babel/polyfill
 
-### dependencies
+### dev dependencies ###
 
 yarn add @babel/cli -D
 
@@ -39,3 +39,9 @@ webpack.config.js ==> webpack configuration file
 babel.config.js ==> babel configuration file
 
 index.html
+
+
+### folder structure ###
+
+src
+components
