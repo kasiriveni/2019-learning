@@ -22,13 +22,17 @@ yarn add @babel/preset-env -D
 
 yarn add @babel/preset-react -D
 
+yarn add @babel/plugin-proposal-decorators -D
+
+yarn add @babel/plugin-proposal-class-properties -D
+
 yarn add webpack -D
 
 yarn add webpack-cli -D
 
 yarn add babel-loader -D
 
-#### rootlevel
+### rootlevel
 
 webpack.config.js ==> webpack configuration file
 
