@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Hello World</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+        <script src="https://unpkg.com/mobx@5.8.0/lib/mobx.umd.js"></script>
+        <script src="https://unpkg.com/mobx-react@5.4.3/index.js"></script>
+        <script src="https://unpkg.com/mobx-react-devtools@6.0.3/index.js"></script>
+        
+    </head>
+    <body>
+        <div id="mount"></div>
+        <script type="text/babel">
+            const {observable, computed} = mobx;
+            const {observer} = mobxReact;
+            const {Component} = React;
+
+            class Todo {
+                id = Math.random();
+                @observable title;
+                @observable finished = false;
+                constructor(title) {
+                    this.title = title;
+                }
+            }
+
+            class TodoList {
+                @observable todos = [];
+                @computed get unfinishedTodoCount() {
+                    return this.todos.filter(todo => !todo.finished).length;
+                }
+            }
+
+            @observer
+            class TodoListView extends Component {
+                render() {
+                    return <div>
+                        <ul>
+                            {this.props.todoList.todos.map(todo => 
+                                <TodoView todo={todo} key={todo.id} />
+                            )}
+                        </ul>
+                        Tasks left: {this.props.todoList.unfinishedTodoCount}
+                        <mobxDevtools.default />
+                    </div>
+                }
+            }
+
+            const TodoView = observer(({todo}) => 
+                <li>
+                    <input
+                        type="checkbox"
+                        checked={todo.finished}
+                        onClick={() => todo.finished = !todo.finished}
+                    />{todo.title}
+                </li>
+            );
+
+            const store = new TodoList();
+
+            ReactDOM.render(<TodoListView todoList={store} />, document.getElementById('mount'));
+
+            store.todos.push(
+                new Todo("Get Coffee"),
+                new Todo("Write simpler code")
+            );
+            store.todos[0].finished = true;
+
+            // For Eval button
+            window.store = store;
+            
+
+                        );
+        </script>
+    
+</html>
