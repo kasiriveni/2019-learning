@@ -1,0 +1,33 @@
+<body>
+    <script>
+        var alarm = {
+            remind: function(aMessage) {
+                alert(aMessage);
+                this.timeoutID = undefined;
+            },
+
+            setup: function() {
+                if (typeof this.timeoutID === "number") {
+                    this.cancel();
+                }
+
+                this.timeoutID = window.setTimeout(
+                    function(msg) {
+                        this.remind(msg);
+                    }.bind(this),
+                    0,
+                    "Wake up!"
+                );
+                console.log(this.timeoutID);
+            },
+
+            cancel: function() {
+                console.log("CLEAR");
+                window.clearTimeout(this.timeoutID);
+            }
+        };
+        window.onclick = function() {
+            alarm.setup();
+        };
+    </script>
+</body>

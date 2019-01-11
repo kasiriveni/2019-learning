@@ -1,0 +1,18 @@
+<body>
+    <script>
+        // clearTimeout setTimeout
+
+        function sayHi() {
+            setTimeout(function() {
+                console.log("hiii");
+            }, 1000);
+            // clearHi();
+        }
+
+        function clearHi() {
+            clearTimeout(sayHi());
+        }
+
+        console.log(sayHi());
+    </script>
+</body>

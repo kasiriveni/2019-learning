@@ -1,0 +1,55 @@
+<body>
+    <script>
+        console.log("js");
+        function _highlight() {
+            console.log("hi");
+        }
+        console.time("started");
+
+        console.log(_highlight());
+        console.timeEnd();
+
+        function hi() {
+            //const data = _data();
+            //  return data;
+            return _data();
+        }
+
+        function _data() {
+            return 3;
+        }
+        var print = hi();
+        console.log(print);
+        const object1 = {
+            name: "srinivas",
+            lastname: "k"
+        };
+        const obj2 = Object.assign(
+            {
+                age: 30
+            },
+            object1
+        );
+
+        console.dir(obj2);
+        console.log(JSON.stringify(object1));
+
+        var user = 29;
+
+        if (user <= 18) {
+            console.log("user is 18 or younger");
+        } else if (user > 18 && user < 40) {
+            console.log("user b/w 19 and 39");
+        } else {
+            console.log("User older than 40");
+        }
+
+        function test() {
+            return true;
+        }
+        function myArr() {
+            return [test()];
+        }
+        alert(myArr());
+    </script>
+</body>

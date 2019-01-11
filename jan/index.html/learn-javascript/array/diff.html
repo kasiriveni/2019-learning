@@ -1,0 +1,18 @@
+<body>
+    <script>
+        var array1 = [1, 2, 3];
+        var array2 = [1, 2];
+
+        var result = [];
+
+        for (var i = 0; i < array1.length; i++) {
+            for (var j = 0; j < array2.length; j++) {
+                // console.log(array1[i], array2[j]);
+                if (array1[i] !== array2[j]) {
+                    result.push(i);
+                }
+                console.log(result);
+            }
+        }
+    </script>
+</body>
