@@ -1,0 +1,15 @@
+{
+    "name": "learn-nodejs",
+    "version": "1.0.0",
+    "main": "./src/index.js",
+    "scripts": {
+        "build": "babel src -d dist",
+        "start": "yarn build && node dist"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/preset-env": "^7.3.1"
+    }
+}
