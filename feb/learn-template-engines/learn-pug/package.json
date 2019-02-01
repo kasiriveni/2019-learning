@@ -1,9 +1,15 @@
 {
-  "name": "learn-pug",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
-    "pug": "^2.0.3"
-  }
+    "name": "learn-pug",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start": "grunt"
+    },
+    "devDependencies": {
+        "grunt": "^1.0.3",
+        "grunt-contrib-clean": "^2.0.0",
+        "grunt-contrib-pug": "^2.0.0",
+        "pug": "^2.0.3"
+    }
 }
