@@ -2,5 +2,10 @@
   "name": "learn-ejs",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ejs": "^2.6.1",
+    "grunt": "^1.0.3",
+    "grunt-ejs": "^0.3.0"
+  }
 }

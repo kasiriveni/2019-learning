@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <a href="<%= url('home.html') %>">Home Page</a>
+
+    <table>
+        <% students.forEach(function(student){ %>
+        <tr>
+            <td><b>Name: </b>
+                <%= student.name %>
+            </td>
+            <td><b>Age: </b>
+                <%= student.age %>
+            </td>
+        </tr>
+        <% }); %>
+    </table>
+</body>
+
+</html>
