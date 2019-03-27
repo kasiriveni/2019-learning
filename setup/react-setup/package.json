@@ -1,0 +1,32 @@
+{
+  "name": "react-setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/apidemo/react-setup",
+  "author": "srinivas kasiriveni <kasiriveni@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack",
+    "start:watch": "webpack --watch",
+    "test": "jest",
+    "formater":"prettier"
+  },
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "jest": "^21.2.1",
+    "prettier": "^1.8.2",
+    "webpack": "^3.9.1"
+  }
+}

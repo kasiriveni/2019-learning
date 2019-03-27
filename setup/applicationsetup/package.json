@@ -1,0 +1,32 @@
+{
+    "name": "samplefragement",
+    "version": "1.0.0",
+    "description": "sample project description",
+    "main": "./src/component/index.js",
+    "author": "kasiriveni",
+    "license": "MIT",
+    "scripts": {
+        "build": "webpack",
+        "watch": "webpack -w",
+        "build:dev": "npm run build && npm run watch",
+        "start": "npm run build && babel-watch  server.js"
+    },
+    "dependencies": {
+        "isomorphic-fetch": "^2.2.1",
+        "react": "*",
+        "react-dom": "*"
+    },
+    "devDependencies": {
+        "@babel/core": "*",
+        "@babel/node": "*",
+        "@babel/preset-env": "*",
+        "@babel/preset-react": "*",
+        "babel-loader": "*",
+        "babel-watch": "^7.0.0",
+        "webpack": "*",
+        "webpack-cli": "*",
+        "express": "^4.16.4",
+        "express-graphql": "^0.7.1",
+        "graphql": "^14.1.1"
+    }
+}
